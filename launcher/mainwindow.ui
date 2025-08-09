@@ -14,13 +14,26 @@
    <string>Game Launcher</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QScrollArea" name="scrollArea">
+   <widget class="QLineEdit" name="searchLineEdit">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
       <width>780</width>
-      <height>580</height>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Search games...</string>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>780</width>
+      <height>540</height>
      </rect>
     </property>
     <property name="widgetResizable">
@@ -32,12 +45,13 @@
        <x>0</x>
        <y>0</y>
        <width>778</width>
-       <height>580</height>
+       <height>540</height>
       </rect>
      </property>
     </widget>
    </widget>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

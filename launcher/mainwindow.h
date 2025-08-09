@@ -9,6 +9,7 @@
 #include <QGridLayout>
 #include <QScrollArea>
 #include <QMap>
+#include <QLineEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -34,12 +35,14 @@ public:
 
 private slots:
     void launchGame();
+    void filterGames();
 
 private:
     void setupGamesFromCSV();
     void createGameWidget(const GameInfo &game, int row, int col);
     QString getGameNameFromDesktop(const QString &desktopFile);
     QColor getAverageColor(const QPixmap &pixmap);
+    void updateGameLayout();
     
     Ui::MainWindow *ui;
     QGridLayout *gamesLayout;

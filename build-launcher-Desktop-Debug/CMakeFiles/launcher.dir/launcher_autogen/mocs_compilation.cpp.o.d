@@ -1,7 +1,7 @@
 CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o: \
- /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp \
+ /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/launcher_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+ /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher_autogen/EWIEGA46WW/moc_mainwindow.cpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -114,7 +114,7 @@ CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/12/backward/auto_ptr.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/launcher_autogen/EWIEGA46WW/../../../launcher/mainwindow.h \
+ /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher_autogen/EWIEGA46WW/../../../launcher/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -301,4 +301,13 @@ CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/c++/12/variant \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h

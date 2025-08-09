@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/Commodore/Code/launcher/launcher
+CMAKE_SOURCE_DIR = /home/Commodore/Code/simpleqt_game_launcher/launcher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/Commodore/Code/launcher/build-launcher-Desktop-Debug
+CMAKE_BINARY_DIR = /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/launcher.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/launcher.dir/flags.make
 CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o: CMakeFiles/launcher.dir/flags.make
 CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o: launcher_autogen/mocs_compilation.cpp
 CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o: CMakeFiles/launcher.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Commodore/Code/launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o -MF CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o -c /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o -MF CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o -c /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp
 
 CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp > CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp > CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp -o CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher_autogen/mocs_compilation.cpp -o CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/launcher.dir/main.cpp.o: CMakeFiles/launcher.dir/flags.make
-CMakeFiles/launcher.dir/main.cpp.o: /home/Commodore/Code/launcher/launcher/main.cpp
+CMakeFiles/launcher.dir/main.cpp.o: /home/Commodore/Code/simpleqt_game_launcher/launcher/main.cpp
 CMakeFiles/launcher.dir/main.cpp.o: CMakeFiles/launcher.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Commodore/Code/launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/launcher.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/launcher.dir/main.cpp.o -MF CMakeFiles/launcher.dir/main.cpp.o.d -o CMakeFiles/launcher.dir/main.cpp.o -c /home/Commodore/Code/launcher/launcher/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/launcher.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/launcher.dir/main.cpp.o -MF CMakeFiles/launcher.dir/main.cpp.o.d -o CMakeFiles/launcher.dir/main.cpp.o -c /home/Commodore/Code/simpleqt_game_launcher/launcher/main.cpp
 
 CMakeFiles/launcher.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/launcher.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Commodore/Code/launcher/launcher/main.cpp > CMakeFiles/launcher.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Commodore/Code/simpleqt_game_launcher/launcher/main.cpp > CMakeFiles/launcher.dir/main.cpp.i
 
 CMakeFiles/launcher.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/launcher.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Commodore/Code/launcher/launcher/main.cpp -o CMakeFiles/launcher.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Commodore/Code/simpleqt_game_launcher/launcher/main.cpp -o CMakeFiles/launcher.dir/main.cpp.s
 
 CMakeFiles/launcher.dir/mainwindow.cpp.o: CMakeFiles/launcher.dir/flags.make
-CMakeFiles/launcher.dir/mainwindow.cpp.o: /home/Commodore/Code/launcher/launcher/mainwindow.cpp
+CMakeFiles/launcher.dir/mainwindow.cpp.o: /home/Commodore/Code/simpleqt_game_launcher/launcher/mainwindow.cpp
 CMakeFiles/launcher.dir/mainwindow.cpp.o: CMakeFiles/launcher.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Commodore/Code/launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/launcher.dir/mainwindow.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/launcher.dir/mainwindow.cpp.o -MF CMakeFiles/launcher.dir/mainwindow.cpp.o.d -o CMakeFiles/launcher.dir/mainwindow.cpp.o -c /home/Commodore/Code/launcher/launcher/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/launcher.dir/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/launcher.dir/mainwindow.cpp.o -MF CMakeFiles/launcher.dir/mainwindow.cpp.o.d -o CMakeFiles/launcher.dir/mainwindow.cpp.o -c /home/Commodore/Code/simpleqt_game_launcher/launcher/mainwindow.cpp
 
 CMakeFiles/launcher.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/launcher.dir/mainwindow.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Commodore/Code/launcher/launcher/mainwindow.cpp > CMakeFiles/launcher.dir/mainwindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Commodore/Code/simpleqt_game_launcher/launcher/mainwindow.cpp > CMakeFiles/launcher.dir/mainwindow.cpp.i
 
 CMakeFiles/launcher.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/launcher.dir/mainwindow.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Commodore/Code/launcher/launcher/mainwindow.cpp -o CMakeFiles/launcher.dir/mainwindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Commodore/Code/simpleqt_game_launcher/launcher/mainwindow.cpp -o CMakeFiles/launcher.dir/mainwindow.cpp.s
 
 # Object files for target launcher
 launcher_OBJECTS = \
@@ -128,7 +128,7 @@ launcher: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.8
 launcher: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.8
 launcher: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.8
 launcher: CMakeFiles/launcher.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Commodore/Code/launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable launcher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable launcher"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/launcher.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +140,6 @@ CMakeFiles/launcher.dir/clean:
 .PHONY : CMakeFiles/launcher.dir/clean
 
 CMakeFiles/launcher.dir/depend:
-	cd /home/Commodore/Code/launcher/build-launcher-Desktop-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/Commodore/Code/launcher/launcher /home/Commodore/Code/launcher/launcher /home/Commodore/Code/launcher/build-launcher-Desktop-Debug /home/Commodore/Code/launcher/build-launcher-Desktop-Debug /home/Commodore/Code/launcher/build-launcher-Desktop-Debug/CMakeFiles/launcher.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/Commodore/Code/simpleqt_game_launcher/launcher /home/Commodore/Code/simpleqt_game_launcher/launcher /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug /home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/launcher.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/launcher.dir/depend
 

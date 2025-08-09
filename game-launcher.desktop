@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Game Launcher
+Comment=Qt-based game launcher with colorful UI
+Exec=/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/launcher
+Icon=applications-games
+Terminal=false
+Categories=Game;Utility;
+Keywords=games;launcher;qt;
+StartupNotify=true

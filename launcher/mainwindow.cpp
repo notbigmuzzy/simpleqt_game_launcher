@@ -20,10 +20,65 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
     setFixedSize(size());
     
+    // Set application icon
+    QIcon appIcon;
+    // Try to use a gaming-related icon
+    appIcon = QIcon::fromTheme("applications-games");
+    if (appIcon.isNull()) {
+        // Fallback to other game-related icons
+        QStringList iconNames = {"games", "game", "joystick", "gamepad", "applications-other"};
+        for (const QString &iconName : iconNames) {
+            appIcon = QIcon::fromTheme(iconName);
+            if (!appIcon.isNull()) break;
+        }
+    }
+    if (!appIcon.isNull()) {
+        setWindowIcon(appIcon);
+    }
+    
+    // Set main window background to semi-transparent black
+    setStyleSheet(
+        "QMainWindow { background-color: rgba(0, 0, 0, 230); }"
+        "QWidget#centralwidget { background-color: transparent; }"
+        "QScrollArea { background-color: transparent; border: none; }"
+        "QScrollArea > QWidget > QWidget { background-color: transparent; }"
+        "QStatusBar {"
+        "    background-color: rgba(40, 40, 40, 200);"
+        "    color: white;"
+        "    border-top: 1px solid rgba(100, 100, 100, 100);"
+        "    font-size: 12px;"
+        "}"
+        "QScrollBar:vertical {"
+        "    background-color: rgba(40, 40, 40, 150);"
+        "    width: 5px;"
+        "    border: none;"
+        "    border-radius: 2px;"
+        "}"
+        "QScrollBar::handle:vertical {"
+        "    background-color: rgba(100, 100, 100, 180);"
+        "    border-radius: 2px;"
+        "    min-height: 20px;"
+        "}"
+        "QScrollBar::handle:vertical:hover {"
+        "    background-color: rgba(150, 150, 150, 200);"
+        "}"
+        "QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {"
+        "    border: none;"
+        "    background: none;"
+        "}"
+    );
+    setAttribute(Qt::WA_TranslucentBackground);
+    
     // Setup the games layout
     gamesLayout = new QGridLayout();
     gamesLayout->setSpacing(10);
     ui->scrollAreaWidgetContents->setLayout(gamesLayout);
+    
+    // Connect search functionality
+    connect(ui->searchLineEdit, &QLineEdit::textChanged, this, &MainWindow::filterGames);
+    
+    // Set default status bar message
+    ui->statusbar->showMessage("Pick a game and have fun ...");
     
     // Load and setup games from CSV
     setupGamesFromCSV();
@@ -43,7 +98,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupGamesFromCSV()
 {
-    QFile file("/home/Commodore/Code/launcher/games_exec_icon.csv");
+    QFile file("/home/Commodore/Code/simpleqt_game_launcher/games_exec_icon.csv");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::critical(this, "Error", "Could not open games_exec_icon.csv file");
         return;
@@ -53,10 +108,7 @@ void MainWindow::setupGamesFromCSV()
     QString line = in.readLine(); // Skip header
     
     // Games to skip
-    QStringList skipGames = {"asciijump.desktop", "blastem.desktop"};
-    
-    int row = 0, col = 0;
-    const int maxCols = 5; // 5 games per row
+    QStringList skipGames = {"asciijump.desktop", "blastem.desktop", "dreamchess.desktop", "dsda-doom.desktop"};
     
     while (!in.atEnd()) {
         line = in.readLine();
@@ -82,17 +134,14 @@ void MainWindow::setupGamesFromCSV()
         game.icon = icon;
         game.process = nullptr;
         
-        createGameWidget(game, row, col);
+        createGameWidget(game, 0, 0); // Position doesn't matter here, will be set in updateGameLayout
         games[game.name] = game;
-        
-        col++;
-        if (col >= maxCols) {
-            col = 0;
-            row++;
-        }
     }
     
     file.close();
+    
+    // Initial layout of all games
+    updateGameLayout();
 }
 
 QString MainWindow::getGameNameFromDesktop(const QString &desktopFile)
@@ -200,15 +249,18 @@ void MainWindow::createGameWidget(const GameInfo &game, int row, int col)
         "    border: 2px solid rgba(%1, %2, %3, 255);"
         "    border-radius: 8px;"
         "    font-weight: bold;"
-        "    padding-top: 10px;"
+        "    padding-top: 18px;"
+        "    text-align: center;"
         "}"
         "QGroupBox::title {"
         "    subcontrol-origin: margin;"
-        "    left: 10px;"
-        "    padding: 0 5px 0 5px;"
+        "    subcontrol-position: top center;"
+        "    top: 5px;"
+        "    padding: 2px 5px 2px 5px;"
         "    color: white;"
         "    background-color: rgba(%1, %2, %3, 255);"
         "    border-radius: 3px;"
+        "    border: 0px;"
         "}"
     ).arg(backgroundColor.red())
      .arg(backgroundColor.green())
@@ -232,8 +284,10 @@ void MainWindow::createGameWidget(const GameInfo &game, int row, int col)
     layout->setSpacing(10);
     groupBox->setLayout(layout);
     
-    // Add to main grid layout
-    gamesLayout->addWidget(groupBox, row, col);
+    // Don't add to main grid layout here - will be done in updateGameLayout
+    // Initially hide the widget
+    groupBox->setParent(ui->scrollAreaWidgetContents);
+    groupBox->hide();
     
     // Store references in the game struct
     const_cast<GameInfo&>(game).groupBox = groupBox;
@@ -264,6 +318,8 @@ void MainWindow::launchGame()
                 this, [this, gameName](int exitCode, QProcess::ExitStatus exitStatus) {
                     GameInfo &gameRef = games[gameName];
                     gameRef.button->setText("Launch");
+                    // Reset status bar message when game closes
+                    ui->statusbar->showMessage("Pick a game and have fun ...");
                     // Restore the window when any game closes
                     showNormal();
                     raise();
@@ -285,6 +341,47 @@ void MainWindow::launchGame()
     } else {
         // Change button text and minimize window
         game.button->setText("Running..");
+        // Update status bar message
+        ui->statusbar->showMessage(QString("Game %1 is running ...").arg(gameName));
         showMinimized();
+    }
+}
+
+void MainWindow::filterGames()
+{
+    updateGameLayout();
+}
+
+void MainWindow::updateGameLayout()
+{
+    // Clear current layout
+    QLayoutItem *item;
+    while ((item = gamesLayout->takeAt(0))) {
+        if (item->widget()) {
+            item->widget()->hide();
+        }
+        delete item;
+    }
+    
+    QString searchTerm = ui->searchLineEdit->text().toLower();
+    int row = 0, col = 0;
+    const int maxCols = 5;
+    
+    // Show games that match search term
+    for (auto it = games.begin(); it != games.end(); ++it) {
+        GameInfo &game = it.value();
+        
+        if (searchTerm.isEmpty() || game.name.toLower().contains(searchTerm)) {
+            gamesLayout->addWidget(game.groupBox, row, col);
+            game.groupBox->show();
+            
+            col++;
+            if (col >= maxCols) {
+                col = 0;
+                row++;
+            }
+        } else {
+            game.groupBox->hide();
+        }
     }
 }

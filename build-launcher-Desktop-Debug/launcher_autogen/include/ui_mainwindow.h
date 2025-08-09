@@ -11,8 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -21,8 +23,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QLineEdit *searchLineEdit;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
+    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -31,15 +35,21 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        searchLineEdit = new QLineEdit(centralwidget);
+        searchLineEdit->setObjectName(QString::fromUtf8("searchLineEdit"));
+        searchLineEdit->setGeometry(QRect(10, 10, 780, 30));
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setGeometry(QRect(10, 10, 780, 580));
+        scrollArea->setGeometry(QRect(10, 50, 780, 540));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 778, 580));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 778, 540));
         scrollArea->setWidget(scrollAreaWidgetContents);
         MainWindow->setCentralWidget(centralwidget);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
@@ -49,6 +59,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Game Launcher", nullptr));
+        searchLineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search games...", nullptr));
     } // retranslateUi
 
 };
