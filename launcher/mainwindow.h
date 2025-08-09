@@ -43,9 +43,13 @@ private:
     QString getGameNameFromDesktop(const QString &desktopFile);
     QColor getAverageColor(const QPixmap &pixmap);
     void updateGameLayout();
+    void setRandomStatusBarColor();
+    void updateGameCount();
     
     Ui::MainWindow *ui;
     QGridLayout *gamesLayout;
     QMap<QString, GameInfo> games;
+    QList<QColor> gameColors;
+    QLabel *gameCountLabel;
 };
 #endif // MAINWINDOW_H

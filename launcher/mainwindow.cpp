@@ -9,12 +9,17 @@
 #include <QHBoxLayout>
 #include <QColor>
 #include <QImage>
+#include <QTime>
+#include <cstdlib>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    
+    // Seed random number generator
+    srand(QTime::currentTime().msec());
     
     // Set window flags to remove maximize button and make window non-resizable
     setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
@@ -38,16 +43,10 @@ MainWindow::MainWindow(QWidget *parent)
     
     // Set main window background to semi-transparent black
     setStyleSheet(
-        "QMainWindow { background-color: rgba(0, 0, 0, 230); }"
+        "QMainWindow { background-color: rgba(0, 0, 0, 200); }"
         "QWidget#centralwidget { background-color: transparent; }"
         "QScrollArea { background-color: transparent; border: none; }"
         "QScrollArea > QWidget > QWidget { background-color: transparent; }"
-        "QStatusBar {"
-        "    background-color: rgba(40, 40, 40, 200);"
-        "    color: white;"
-        "    border-top: 1px solid rgba(100, 100, 100, 100);"
-        "    font-size: 12px;"
-        "}"
         "QScrollBar:vertical {"
         "    background-color: rgba(40, 40, 40, 150);"
         "    width: 5px;"
@@ -79,6 +78,11 @@ MainWindow::MainWindow(QWidget *parent)
     
     // Set default status bar message
     ui->statusbar->showMessage("Pick a game and have fun ...");
+    
+    // Initialize game count label and add to status bar
+    gameCountLabel = new QLabel(this);
+    gameCountLabel->setStyleSheet("QLabel { color: white; font-size: 12px; }");
+    ui->statusbar->addPermanentWidget(gameCountLabel);
     
     // Load and setup games from CSV
     setupGamesFromCSV();
@@ -142,6 +146,12 @@ void MainWindow::setupGamesFromCSV()
     
     // Initial layout of all games
     updateGameLayout();
+    
+    // Set random status bar color from game colors
+    setRandomStatusBarColor();
+    
+    // Update game count display
+    updateGameCount();
 }
 
 QString MainWindow::getGameNameFromDesktop(const QString &desktopFile)
@@ -241,6 +251,9 @@ void MainWindow::createGameWidget(const GameInfo &game, int row, int col)
         iconLabel->setStyleSheet("font-size: 36px;");
         backgroundColor = QColor(64, 64, 64); // Default color for emoji fallback
     }
+    
+    // Store the color for potential status bar use
+    gameColors.append(backgroundColor);
     
     // Apply background color to group box
     QString styleSheet = QString(
@@ -383,5 +396,66 @@ void MainWindow::updateGameLayout()
         } else {
             game.groupBox->hide();
         }
+    }
+    
+    // Update game count after layout change
+    updateGameCount();
+}
+
+void MainWindow::setRandomStatusBarColor()
+{
+    if (gameColors.isEmpty()) {
+        return; // No colors available, keep default
+    }
+    
+    // Pick a random color from the game colors
+    int randomIndex = rand() % gameColors.size();
+    QColor selectedColor = gameColors[randomIndex];
+    
+    // Increase color intensity by 25%
+    int h, s, v;
+    selectedColor.getHsv(&h, &s, &v);
+    
+    // Increase saturation by 25% (clamped to 255)
+    s = qMin(255, static_cast<int>(s * 1.25));
+    
+    // Also slightly increase value/brightness by 10% for more intensity
+    v = qMin(255, static_cast<int>(v * 1.10));
+    
+    QColor intensifiedColor;
+    intensifiedColor.setHsv(h, s, v);
+    
+    // Apply the intensified color to status bar
+    QString statusBarStyle = QString(
+        "QStatusBar {"
+        "    background-color: rgba(%1, %2, %3, 200);"
+        "    color: white;"
+        "    border-top: 1px solid rgba(%1, %2, %3, 255);"
+        "    font-size: 12px;"
+        "}"
+    ).arg(intensifiedColor.red())
+     .arg(intensifiedColor.green())
+     .arg(intensifiedColor.blue());
+    
+    ui->statusbar->setStyleSheet(statusBarStyle);
+}
+
+void MainWindow::updateGameCount()
+{
+    int visibleCount = 0;
+    int totalCount = games.size();
+    
+    // Count visible games
+    for (const auto &game : games) {
+        if (game.groupBox && game.groupBox->isVisible()) {
+            visibleCount++;
+        }
+    }
+    
+    // Update the label text
+    if (visibleCount == totalCount || visibleCount == 0) {
+        gameCountLabel->setText(QString("Number of Games: %1").arg(totalCount));
+    } else {
+        gameCountLabel->setText(QString("Games: %1 / %2").arg(visibleCount).arg(totalCount));
     }
 }

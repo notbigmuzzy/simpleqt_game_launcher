@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o CMakeFiles/launcher.dir/main.cpp.o CMakeFiles/launcher.dir/mainwindow.cpp.o -o launcher  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.8 
