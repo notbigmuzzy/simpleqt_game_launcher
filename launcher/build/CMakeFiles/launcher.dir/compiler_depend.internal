@@ -363,29 +363,6 @@ CMakeFiles/launcher.dir/launcher_autogen/mocs_compilation.cpp.o
  /usr/include/c++/12/variant
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsBlurEffect
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsProxyWidget
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsproxywidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
 
 CMakeFiles/launcher.dir/main.cpp.o
  /home/Commodore/Code/simpleqt_game_launcher/launcher/main.cpp
@@ -748,32 +725,10 @@ CMakeFiles/launcher.dir/main.cpp.o
  /usr/include/c++/12/variant
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsBlurEffect
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsProxyWidget
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsproxywidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
@@ -1140,35 +1095,13 @@ CMakeFiles/launcher.dir/mainwindow.cpp.o
  /usr/include/c++/12/variant
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsBlurEffect
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsProxyWidget
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsproxywidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
  /home/Commodore/Code/simpleqt_game_launcher/launcher/build/launcher_autogen/include/ui_mainwindow.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
@@ -1189,6 +1122,7 @@ CMakeFiles/launcher.dir/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout

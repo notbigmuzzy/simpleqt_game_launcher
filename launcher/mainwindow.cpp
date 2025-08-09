@@ -269,9 +269,8 @@ void MainWindow::createGameWidget(const GameInfo &game, int row, int col)
         "    subcontrol-origin: margin;"
         "    subcontrol-position: top center;"
         "    top: 5px;"
-        "    padding: 2px 5px 2px 5px;"
+        "    padding: 2px 10px 2px 5px;"
         "    color: white;"
-        "    background-color: rgba(%1, %2, %3, 255);"
         "    border-radius: 3px;"
         "    border: 0px;"
         "}"
@@ -285,6 +284,27 @@ void MainWindow::createGameWidget(const GameInfo &game, int row, int col)
     QPushButton *button = new QPushButton("Launch");
     button->setFixedSize(100, 30);
     button->setProperty("gameName", game.name);
+    
+    // Style the button with black background and white text
+    button->setStyleSheet(
+        "QPushButton {"
+        "    background-color: rgba(255, 255, 255, 30);"
+        "    border: none;"
+        "    color: white;"
+        "    border-radius: 4px;"
+        "    padding: 2px;"
+        "}"
+        "QPushButton:hover {"
+        "    background-color: rgba(255, 255, 255, 80);"
+        "    border: none;"
+        "    color: white;"
+        "}"
+        "QPushButton:pressed {"
+        "    background-color: rgba(255, 255, 255, 50);"
+        "    border: none;"
+        "    color: white;"
+        "}"
+    );
     
     // Connect button to launch slot
     connect(button, &QPushButton::clicked, this, &MainWindow::launchGame);
