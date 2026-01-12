@@ -1,8 +1,0 @@
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/launcher.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/install.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/install/local.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/install/strip.dir
-/home/Commodore/Code/simpleqt_game_launcher/build-launcher-Desktop-Debug/CMakeFiles/launcher_autogen.dir

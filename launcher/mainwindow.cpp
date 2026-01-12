@@ -102,7 +102,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupGamesFromCSV()
 {
-    QFile file("/home/Commodore/Code/simpleqt_game_launcher/games_exec_icon.csv");
+    QFile file("/home/nbm/Code/simpleqt_game_launcher/games_exec_icon.csv");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::critical(this, "Error", "Could not open games_exec_icon.csv file");
         return;
