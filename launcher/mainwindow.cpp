@@ -22,7 +22,9 @@ MainWindow::MainWindow(QWidget *parent)
     srand(QTime::currentTime().msec());
     
     // Set window flags to remove maximize button and make window non-resizable
-    setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+    setWindowFlags(Qt::Window | Qt::CustomizeWindowHint | Qt::WindowTitleHint
+                   | Qt::WindowSystemMenuHint | Qt::WindowMinimizeButtonHint
+                   | Qt::WindowCloseButtonHint);
     setFixedSize(size());
     
     // Set application icon
@@ -41,9 +43,9 @@ MainWindow::MainWindow(QWidget *parent)
         setWindowIcon(appIcon);
     }
     
-    // Set main window background to semi-transparent black
+    // Set main window background to opaque black
     setStyleSheet(
-        "QMainWindow { background-color: rgba(0, 0, 0, 200); }"
+        "QMainWindow { background-color: rgb(0, 0, 0); }"
         "QWidget#centralwidget { background-color: transparent; }"
         "QScrollArea { background-color: transparent; border: none; }"
         "QScrollArea > QWidget > QWidget { background-color: transparent; }"
@@ -66,7 +68,6 @@ MainWindow::MainWindow(QWidget *parent)
         "    background: none;"
         "}"
     );
-    setAttribute(Qt::WA_TranslucentBackground);
     
     // Setup the games layout
     gamesLayout = new QGridLayout();
@@ -444,6 +445,13 @@ void MainWindow::setRandomStatusBarColor()
     
     QColor intensifiedColor;
     intensifiedColor.setHsv(h, s, v);
+
+    QColor windowColor = intensifiedColor.darker(180);
+    setStyleSheet(styleSheet() + QString(
+        "QMainWindow { background-color: rgb(%1, %2, %3); }"
+    ).arg(windowColor.red())
+     .arg(windowColor.green())
+     .arg(windowColor.blue()));
     
     // Apply the intensified color to status bar
     QString statusBarStyle = QString(
